@@ -28,11 +28,11 @@ attributes.headers.transactionId]]></ee:set-variable>
 		<logger level="INFO" doc:name="Logger" doc:id="c91eb62b-f0b2-49cc-b752-df1df999ac80" message="Request Received For TravelOnTip External System For transactionId #[vars.transactionId]"/>
 		<choice doc:name="Choice" doc:id="a1bcffcf-dee1-4874-a78d-3ba6b1b681c8" >
 			<when expression='#[vars.serviceType =="routes"]'>
-				<logger level="INFO" doc:name="Logger" doc:id="77aba19a-dba1-4a51-8235-d1ff6d50bad7" message="Routes flow called for For TravelOnTip External System For transactionId #[vars.transactionId]"/>
+				<logger level="INFO" doc:name="Logger" doc:id="77aba19a-dba1-4a51-8235-d1ff6d50bad7" message="Routes flow called for TravelOnTip External System For transactionId #[vars.transactionId]"/>
 				<flow-ref doc:name="Flow Reference" doc:id="24f244c7-346d-42d1-b837-f79182650d1e" name="TravelonTip-getRoutes.implemetatiomFlow"/>
 			</when>
 			<when expression='#[vars.serviceType =="schedules"]'>
-				<logger level="INFO" doc:name="Logger" doc:id="b20ecf21-e95e-43c5-9b71-f4ea8606e3ed" message="Schedule flow called for For TravelOnTip External System For transactionId #[vars.transactionId]"/>
+				<logger level="INFO" doc:name="Logger" doc:id="b20ecf21-e95e-43c5-9b71-f4ea8606e3ed" message="Schedule flow called for TravelOnTip External System For transactionId #[vars.transactionId]"/>
 				<flow-ref doc:name="Flow Reference" doc:id="1de09eb8-988c-45fc-91b1-02b0a7b89e6f" name="TravelonTip-getSchedules-implementationFlow"/>
 			</when>
 			<otherwise >
